@@ -1,0 +1,19 @@
+<div class="cards">
+	<div class="row" id="cards-container">
+		<div class="col s12 m12"> 
+			<div class="card small" ng-repeat="band in bands | filter : {decade:decade} | filter: {name: namefilter}">
+				<div class="card-image waves-effect waves-block waves-light" >
+					<a ng-click = "myFilter = {id:id}:true" href="#/band/{{band.name}}"><img ng-src="{{band.image}}"></a>
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">{{band.name | uppercase}}<i class="material-icons right"></i></span>
+					<p></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">{{band.name}}<i class="material-icons right"></i></span>
+					<p>{{band.songs}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

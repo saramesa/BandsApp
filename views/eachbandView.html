@@ -1,0 +1,27 @@
+
+<div class="row" ng-controller="BandViewController">
+
+    <div  ng-repeat="band in bands | filter:{name:name}:true">
+    <header-view></header-view>
+
+      <div class="card fullCardProduct">
+      
+      <div class="card-image">
+       
+       
+        <a><img width="200px" class="catalogue-img" ng-src="{{band.image}}"></a>
+      </div>
+
+      <div class="card-content">
+
+        <h3>{{band.name}}</h3>
+        <p>{{band.decade}}</p>
+        <p><strong>Best songs: </strong></p>
+        <p ng-repeat="song in band.songs">{{song}}</p>
+       
+      </div>
+    </div>
+    </div>
+  
+</div>
+
